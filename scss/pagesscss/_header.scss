@@ -1,0 +1,38 @@
+// Header
+
+.header {
+    grid-area: header;
+    width: 100%;
+    height: 15%;
+    padding: 30px; }
+    .header .logo a {
+    font-size: 3.1em;
+    text-decoration: none;
+    color: white;
+    padding: 18px;
+    font-family: 'Lobster', cursive; }
+    .header .navbar {
+    --bs-navbar-color: white;
+    --bs-navbar-hover-color: #0dff00;
+    --bs-navbar-brand-color: white;
+    --bs-navbar-brand-hover-color: #0dff00; }
+    .header .bg-light {
+    background-color: transparent !important; }
+    .header .navbar-toggler {
+    background-color: white;
+    color: black; }
+    .header .navbar-collapse {
+    justify-content: end;
+    font-size: 1.2em; }
+    .header .navbar-collapse .nav-link {
+        text-align: center;
+        font-size: 1.20em;
+        margin-left: 8px;
+        margin-right: 8px; }
+
+@keyframes main-text {
+    0% {
+    opacity: 0; }
+    100% {
+    opacity: 1;
+    color: white; } }

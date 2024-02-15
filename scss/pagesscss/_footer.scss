@@ -1,0 +1,42 @@
+// Footer
+
+
+$top-red: rgb(237, 120, 120);
+
+.footer {
+    background-color: rgb(4, 4, 4);
+    color: white;
+    text-align: center;
+    padding-top: 28px;
+    font-size: 1em;
+    height: 140px;
+
+    .socialmedia {
+        color: white;
+        padding: 2px;
+        font-size: 1.3em;
+
+        &:hover {
+            color: $top-red;
+            transition: .6s;
+        }
+    }
+
+    .moreinfo {
+        a {
+            color: $top-red;
+
+            &:hover {
+                color: rgb(255, 255, 255);
+                transition: .6s;
+            }
+        }
+
+    }
+
+    .footer-copyright {
+        display: flex;
+        justify-content: center;
+        height: 20px;
+    }
+}

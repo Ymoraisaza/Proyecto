@@ -1,0 +1,86 @@
+// disquera
+
+// Mixins & Extends
+
+
+%text-coderhouse-pilasbaby {
+width: 360px;
+height: 400px;
+display: flex;
+align-items: center;
+font-size: 1em;
+}
+
+%pilasbaby-p {
+color: red;
+font-weight: bold;
+}
+
+%pilas-baby-img-text {
+display: flex;
+justify-content: center;
+align-items: flex-end;
+margin-top: 80px;
+}
+
+
+.courses-main-container {
+background-image: url(https://w.forfun.com/fetch/ba/ba597aee0b8dd40d88d6e909d3f48f0a.jpeg);
+background-color: rgba(0, 0, 0, 0.5);
+background-blend-mode: soft-light;
+background-repeat: no-repeat;
+background-size: cover;
+height: 100px;
+background-position-y: -150px; }
+
+.courses-main-container .courses-main {
+display: flex;
+flex-direction: column;
+text-shadow: 1px;
+margin-top: 200px;
+justify-content: center;
+align-items: center;
+animation-name: aparition-box;
+animation-iteration-count: 1;
+animation-duration: 1.8s;
+animation-fill-mode: forwards; }
+
+.img2{
+display:flex;
+width: 100%;
+height: 430px;
+}
+
+.img2 img{
+width: 600px;
+flex-grow: 1;
+object-fit: cover;
+opacity: .8;
+transition: .5s ease;
+}
+.img3{
+display:flex;
+width: 100%;
+height: 430px;
+}
+
+.img3 img{
+width: 600px;
+flex-grow: 1;
+object-fit: cover;
+opacity: .8;
+transition: .5s ease;
+}
+
+.servicio{
+width: 100%;
+background-image: url(https://w.forfun.com/fetch/ba/ba597aee0b8dd40d88d6e909d3f48f0a.jpeg);
+height: 300px;
+}
+.servicio img{
+width: 20%;
+display: flexbox;
+margin-top:100px ;
+padding-left: 100px;
+padding-bottom: 100px;
+}   
