@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; }
+
+.header {
+    grid-area: header;
+    width: 100%;
+    height: 15%;
+    padding: 30px; }
+    .header .logo a {
+    font-size: 3.1em;
+    text-decoration: none;
+    color: white;
+    padding: 18px;
+    font-family: 'Lobster', cursive; }
+    .header .navbar {
+    --bs-navbar-color: white;
+    --bs-navbar-hover-color: #0dff00;
+    --bs-navbar-brand-color: white;
+    --bs-navbar-brand-hover-color: #0dff00; }
+    .header .bg-light {
+    background-color: transparent !important; }
+    .header .navbar-toggler {
+    background-color: white;
+    color: black; }
+    .header .navbar-collapse {
+    justify-content: end;
+    font-size: 1.2em; }
+    .header .navbar-collapse .nav-link {
+        text-align: center;
+        font-size: 1.20em;
+        margin-left: 8px;
+        margin-right: 8px; }
+
+@keyframes main-text {
+    0% {
+    opacity: 0; }
+    100% {
+    opacity: 1;
+    color: white; } }
+
+.footer {
+    background-color: #040404;
+    color: white;
+    text-align: center;
+    padding-top: 28px;
+    font-size: 1em;
+    height: 140px; }
+    .footer .moreinfo a {
+    color: #ffffff; }
+    .footer .moreinfo a:hover {
+        color: white;
+        transition: .6s; }
+
+
+.container-home-grid {
+    display: grid;
+    grid-template-areas: "header header header"
+    "main main main"
+    "main-content main-content main-content"
+    "footer footer footer";
+    height: 100vh;
+    width: 100vw; }
+
+.header {
+    grid-area: header; }
+
+
+.main-content {
+    grid-area: main-content; }
+    .main-content .main-content-container-text {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+    color: white;
+    width: 500px;
+    margin-left: 100px;
+    margin-top: 180px;
+    animation-name: main-text;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 1.2s;
+    animation-delay: .3s;
+    opacity: 0;
+    animation-fill-mode: forwards; }
+    .main-content .main-content-container-text h1 {
+        font-size: 4em; }
+
+.main-home-grid {
+    grid-area: main;
+    height: 900px;
+    background-image: url(https://w.forfun.com/fetch/ba/ba597aee0b8dd40d88d6e909d3f48f0a.jpeg);
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: soft-light;
+    background-size: cover;
+    background-position-y: -150px; }
+
+.footer-home-grid {
+    grid-area: footer; }

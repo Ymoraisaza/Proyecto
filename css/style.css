@@ -134,6 +134,41 @@
   background-position-y: -150px;
 }
 
+.contenedor-boton{  
+  border-radius: 1em;
+  background: #000000;
+  margin: 10px;
+  width: 500px;
+  height: 40px;
+  margin-left: 100px;
+  flex-direction: column;
+  animation-name: main-text;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 1.2s;
+  animation-delay: 0.3s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+.contenedor-boton .boton-simulador{
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  margin-left: 10px;
+  color: #ffffff;
+  font-family: "Roboto Mono", monospace;
+  font-weight: bold;
+  text-align: center;
+  font-size: 2em;
+  text-decoration: none;
+}
+.contenedor-boton:hover{
+  text-decoration: none;
+    color: red;
+    font-weight: bold;
+}
+
+
 .footer-home-grid {
   grid-area: footer;
 }
