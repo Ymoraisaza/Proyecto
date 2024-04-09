@@ -61,7 +61,6 @@ function elegirServicio(salir){
             alert("Gracias por su visita")
             salir= true
             return salir
-        break;
         default:
             alert("Ingresa una opcion de la lista")
         break;
@@ -84,10 +83,10 @@ function productosDisponibles(array){
 function filtrar (array) {
     //-----Menu para filtrado-------//
     let opcionDeFiltrado = parseInt(prompt(`
-        1_ Buscar Remeras por MARCA
-        2_ Buscar Remeras por PRECIO
-        3_ Buscar Remeras por MODELO
-        4_ Buscar Remeras por TIPO
+        1_ Buscar producto por MARCA
+        2_ Buscar producto por PRECIO
+        3_ Buscar producto por MODELO
+        4_ Buscar producto por TIPO
     `))
     switch(opcionDeFiltrado){
         case 1:
