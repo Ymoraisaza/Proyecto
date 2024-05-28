@@ -67,7 +67,7 @@ function ingresarUsuario() {
         oFormLogin.action = "./index.html";
     } else {
         // Si esta establecida, muestro la pagina del carrito
-        oFormLogin.action = "./pages/carrito.html";
+        oFormLogin.action = "../pages/carrito.html";
     }
 
 }
