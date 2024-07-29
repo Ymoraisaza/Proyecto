@@ -1,27 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DashboardComponent } from './dashboard.component';
-
-import {MatIconModule} from '@angular/material/icon';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
-import { UsuariosModule } from './pages/usuarios/usuarios.module';
+import {MatIconModule} from '@angular/material/icon';
+import { StudentsModule } from './pages/students/students.module';
+
 
 
 
 @NgModule({
-  declarations: [
-    DashboardComponent
-  ],
-  imports: [
-    CommonModule,
-    MatIconModule,
-    MatSidenavModule,
-    MatToolbarModule,
-    UsuariosModule,
-  ],
-  exports:[
-    DashboardComponent,
-  ]
+  declarations: [DashboardComponent,],
+  imports: [CommonModule,MatSidenavModule,MatButtonModule,MatToolbarModule,MatIconModule,StudentsModule],
+  exports: [DashboardComponent]
 })
 export class DashboardModule { }

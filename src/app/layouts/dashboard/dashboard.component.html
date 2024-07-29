@@ -1,37 +1,28 @@
-<mat-drawer-container class="drawer-container" autosize>
-    <mat-drawer #drawer class="example-sidenav" mode="side">
-        
+    <mat-drawer-container class="dashboard-container" autosize>
+        <mat-drawer #drawer class="example-sidenav" mode="side">
+        <p>Auto-resizing sidenav</p>
         @if (showFiller) {
-            <p>componentes</p>
-            <p>componentes</p>
-            <p>componentes</p>
-            <p>componentes</p>
-
+            <p>Lorem, ipsum dolor sit amet consectetur.</p>
         }
         <button (click)="showFiller = !showFiller" mat-raised-button>
-            Menu principal
+            Toggle extra text
         </button>
-    </mat-drawer>
+        </mat-drawer>
     
-    <div class="sidenav-content">
-        <mat-toolbar color="primary" >
-            <button
-            (click)="drawer.toggle()"
-            
-                mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-                <mat-icon>menu</mat-icon>
-            </button>
-            <span class="ml-4">My App</span>
-            <span class="example-spacer"></span>
+        <div class="example-sidenav-content">
+            <mat-toolbar color="primary">
+                <button (click)="drawer.toggle()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+                    <mat-icon>menu</mat-icon>
+                </button>
+                <span>Coder House App </span>
+                <span class="example-spacer"></span>
+                <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+                    <mat-icon>favorite</mat-icon>
+                </button>
+            </mat-toolbar>
+            <app-students></app-students>
+        </div>
+    
+    </mat-drawer-container>
 
-        </mat-toolbar>
-    </div>
-        
-    <div>
-        <app-usuarios></app-usuarios>
-    </div>
-
-
-
-</mat-drawer-container>
-
+    
