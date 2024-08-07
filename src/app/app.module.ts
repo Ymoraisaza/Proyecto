@@ -1,28 +1,30 @@
-import { NgModule } from '@angular/core';
+import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { ReactiveFormsComponent } from './components/reactive-forms/reactive-forms.component';
-import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { DashboardComponent } from './layouts/dashboard/dashboard.component';
-import { DashboardModule } from './layouts/dashboard/dashboard.module';
-import {MAT_FORM_FIELD_DEFAULT_OPTIONS} from '@angular/material/form-field';
-
-
+import { AppRountingModule } from './app-rounting.module';
+import { AppComponent } from './app.component';
+import { CoreModule } from './core/core.module';
+import { SharedModule } from './shared/shared.module';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { MaterialModule } from './material.module';
 @NgModule({
-  declarations: [AppComponent,ReactiveFormsComponent,],
-  imports: [BrowserModule,AppRoutingModule, ReactiveFormsModule, BrowserAnimationsModule,DashboardModule,ReactiveFormsModule],
-  providers: [{
-    provide: MAT_FORM_FIELD_DEFAULT_OPTIONS,
-    useValue: {
-      appearance: 'outline',
-    }
-  }],
+  declarations: [
+    AppComponent,
+    ],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    AppRountingModule,
+    CoreModule,
+    SharedModule,
+    MaterialModule,
+    StoreModule.forRoot({}, {}),
+    EffectsModule.forRoot([]),
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
+    ],
+  providers: [],
   bootstrap: [AppComponent]
 })
-
-
-
-export class AppModule { }
+export class AppModule {}

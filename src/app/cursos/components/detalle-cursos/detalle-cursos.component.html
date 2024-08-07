@@ -1,0 +1,18 @@
+
+<mat-card class="card">
+  <img src="https://www.bbvaapimarket.com/wp-content/uploads/2018/08/recursosprogramadores.png" class="card-img-bottom" alt="...">
+
+  <div class="card-body">
+    <h5 class="card-title">{{curso.nombre}}</h5>
+    <p class="card-text">comision: {{curso.comision}}</p>
+    <p class="card-text">Profesor: {{curso.profesor}}</p>
+    <p class="card-text">Fecha Inicio: {{curso.fechaInicio | fechaFormato}}</p>
+    <p class="card-text">Fecha Finalizacion: {{curso.fechaFin | fechaFormato}}</p>
+    <p>{{ curso.inscripcionAbierta | booleanoATexto: 'Inscripciones abiertas' : 'Inscripciones cerradas' }}</p>
+    <mat-card-actions>
+      <button (click)="inscribirmeAlCurso()">Inscribite!</button>
+    </mat-card-actions>
+  </div>
+</mat-card>
+
+

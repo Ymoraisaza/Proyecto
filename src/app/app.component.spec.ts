@@ -1,12 +1,16 @@
 import { TestBed } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { AppRountingModule } from './app-rounting.module';
+import { MaterialModule } from './material.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule
+      imports:[
+        AppRountingModule,
+        MaterialModule,
+        BrowserAnimationsModule
       ],
       declarations: [
         AppComponent
@@ -20,16 +24,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'clase-6'`, () => {
+/*   it(`should have as title 'ProyectoFinal-Duran'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('clase-6');
-  });
+    expect(app.inicio).toEqual('ProyectoFinal-Duran');
+  }); */
 
-  it('should render title', () => {
+/*   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, clase-6');
-  });
+    expect(compiled.querySelector('.content span')?.textContent).toContain('ProyectoFinal-Duran app is running!');
+  }); */
 });

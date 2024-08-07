@@ -3,42 +3,30 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "clase-6": {
+    "ProyectoFinal-Duran": {
       "projectType": "application",
-      "schematics": {
-        "@schematics/angular:component": {
-          "style": "scss",
-          "standalone": false
-        },
-        "@schematics/angular:directive": {
-          "standalone": false
-        },
-        "@schematics/angular:pipe": {
-          "standalone": false
-        }
-      },
+      "schematics": {},
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:application",
+          "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/clase-6",
+            "outputPath": "dist/proyecto-final-duran",
             "index": "src/index.html",
-            "browser": "src/main.ts",
+            "main": "src/main.ts",
             "polyfills": [
               "zone.js"
             ],
             "tsConfig": "tsconfig.app.json",
-            "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
-              "node_modules/primeflex/primeflex.css",
-              "src/styles.scss"
+              "@angular/material/prebuilt-themes/indigo-pink.css",
+              "src/styles.css"
             ],
             "scripts": []
           },
@@ -59,9 +47,12 @@
               "outputHashing": "all"
             },
             "development": {
+              "buildOptimizer": false,
               "optimization": false,
+              "vendorChunk": true,
               "extractLicenses": false,
-              "sourceMap": true
+              "sourceMap": true,
+              "namedChunks": true
             }
           },
           "defaultConfiguration": "production"
@@ -70,10 +61,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "clase-6:build:production"
+              "browserTarget": "ProyectoFinal-Duran:build:production"
             },
             "development": {
-              "buildTarget": "clase-6:build:development"
+              "browserTarget": "ProyectoFinal-Duran:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -81,7 +72,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "clase-6:build"
+            "browserTarget": "ProyectoFinal-Duran:build"
           }
         },
         "test": {
@@ -92,13 +83,13 @@
               "zone.js/testing"
             ],
             "tsConfig": "tsconfig.spec.json",
-            "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "@angular/material/prebuilt-themes/indigo-pink.css",
+              "src/styles.css"
             ],
             "scripts": []
           }
@@ -107,6 +98,9 @@
     }
   },
   "cli": {
+    "schematicCollections": [
+      "@ngrx/schematics"
+    ],
     "analytics": false
   }
 }
