@@ -1,30 +1,33 @@
-import { NgModule, isDevMode } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AppRountingModule } from './app-rounting.module';
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
+import { HTTP_INTERCEPTORS } from '@angular/common/http'; 
+import { InterceptorHttpInterceptor } from './store/services/interceptor-http.interceptor';
 import { StoreModule } from '@ngrx/store';
+import { appReducer } from './store/services/redux/CourseIndex';
 import { EffectsModule } from '@ngrx/effects';
-import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { MaterialModule } from './material.module';
+import { CourseEffect } from './store/services/redux/CourseEffect';
+ 
+
 @NgModule({
   declarations: [
     AppComponent,
-    ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    AppRountingModule,
-    CoreModule,
+    
+  ],
+  imports: [    
+    AppRoutingModule,
+    BrowserAnimationsModule,  
     SharedModule,
-    MaterialModule,
-    StoreModule.forRoot({}, {}),
-    EffectsModule.forRoot([]),
-    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
-    ],
-  providers: [],
-  bootstrap: [AppComponent]
+    StoreModule.forRoot(appReducer, {}), EffectsModule.forRoot([]),
+    EffectsModule.forFeature([CourseEffect]),
+  ],
+
+  bootstrap: [AppComponent],
+  providers: [
+      { provide: HTTP_INTERCEPTORS, useClass: InterceptorHttpInterceptor, multi: true }
+  ]
 })
-export class AppModule {}
+export class AppModule { }
